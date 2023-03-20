@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+
+.side-bar{
+    background-color: black;
+    width: 241px;
+    height: 100vh;
+}
+
+.logo>img{
+    width: 131px;
+    padding: 0px 24px;
+    margin: 18px 0px;
+}
+
+.feature{
+    display: flex;
+    align-items: center;
+    padding: 11px 25px;
+}
+
+.feature>img{
+    width: 22px;
+}
+
+.feature-name{
+    color: #b1b1b1;
+    font-weight: 700;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.sideBar-feature-box-2{
+    margin-top: 35px;
+}
+
+.line{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.breakLine{
+    background-color: #b1b1b1;
+    width: 200px;
+    height: 0.1px;
+}
+
+
+.sideBar-feature-box-3{
+    /* height: 269px; */
+    /* border: 2px solid blue; */
+    /* width: 100%; */
+    height: 20vw;
+    display: flex;
+    align-items: end;
+}
+
+
+
+/*---------------------------------->>>>>> Update In Git*/
