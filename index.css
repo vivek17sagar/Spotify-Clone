@@ -4,6 +4,10 @@
     /* border: 1px solid red; */
 }
 
+
+.container{
+    display: flex;
+}
 .side-bar{
     background-color: black;
     width: 241px;
@@ -62,3 +66,92 @@
 
 
 /*---------------------------------->>>>>> Update In Git*/
+
+
+.main-container{
+    width: 85vw;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #121212;
+}
+
+
+
+.navbar{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    padding: 0px 20px;
+    align-items: center;
+    background-color: transparent;
+}
+
+.navbar-left-content{
+    width: 80px;
+    padding: 10px 10px;
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left-content>img{
+    border-radius: 20px;
+    width: 32px;
+}
+
+
+.navbar-right-content{
+    display: flex;
+    align-items: center;
+    width: 230px;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+
+
+.upgrade{
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    padding: 4px 12px;
+}
+
+.profile{
+    display: flex;
+    border: none;
+    align-items: center;
+    background-color: black;
+    height: 35px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.profile>img{
+    padding: 1.5px 0px 1.5px 4px;
+}
+.profile-list{
+    background-color: transparent;
+    height: 35px;
+    color: white;
+    padding: 5px;
+    width: 100px;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+}
+
+
+/* ----------------------------------- */
+
+.greeting{
+    padding: 16px 25px;
+}
+
+.greeting-quote{
+    font-size: xx-large;
+    color: white;
+}
