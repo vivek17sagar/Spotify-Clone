@@ -5,10 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
-    <script src="./index.js" defer></script>
+    <!-- <script type="module" src="./spotify.js" defer></script> -->
+    <script type="module" src="./index.js" defer></script>
+   
     <title>Spotify</title>
 </head>
 <body>
+    <div class = "player">
+        <div class="left-content-player">
+            <div class="left-content-image">
+                <img src="./images/trackPhoto.jpg" alt="trackphoto">
+            </div>
+            <div class="left-content-name">
+                <div class="name-head">
+                    Brown Shortie (feat. Sonam Bajwa)
+                </div>
+                <div class="name-description">
+                    Sidhu Moosewala, Sonam Bajwa
+                </div>
+            </div>
+        </div>
+        <div class="mid-content-player">
+            <div class="controls-player">
+                <img src="./images/shuffle.png" alt="shuffle">
+                <img src="./images/previous.png" alt="previos">
+                <img src="./images/play.png" alt="play">
+                <img src="./images/next.png" alt="next">
+                <img src="./images/repeat.png" alt="repeat">
+            </div>
+            <div class="timeout-song">
+                <input type="range" class="slider">
+            </div>
+        </div>
+        <div class="right-content-player">
+            <div class="controls-other-player">
+                <img src="./images/mic.png" alt="mic">
+                <img src="./images/queue.png" alt="queue">
+                <img src="./images/connect.png" alt="connect">
+                <img src="./images/speaker.png" alt="volume">
+            </div>
+            <div class="volume-control">
+                <input type="range" class="volume-slider">
+            </div>
+        </div>
+        </div>
     <div class="container">
         <div class="side-bar">
             <div class="logo">
@@ -61,7 +101,7 @@
                     </div>
                 </div>                    
         </div>
-
+    
 
         <div class="main-container">
             <div class="main-container-top">
@@ -92,6 +132,8 @@
                         Good Morning
                     </div>
                 </div>
+                
+
                 <div class="top-container-playlist">
                     <div class="playlist-top">
                         <div class = "playlist-box">
@@ -144,12 +186,18 @@
                                 Neha Kakkar
                             </div>
                         </div>
-                    </div>
-                    
+                    </div>   
                 </div>
             </div>
             <div class="main-container-bottom">
-
+                <!-- <div class="songs-content">
+                    <div class="playlist-titles">
+                            
+                    </div>
+                        <div class="songs-card">
+                          
+                        </div>
+                </div> -->
             </div>
         </div>
     </div>
