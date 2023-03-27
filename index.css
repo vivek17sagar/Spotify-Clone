@@ -183,8 +183,13 @@
     padding: 0px 20px;
     align-items: center;
     background-color: transparent;
+    position: fixed;
+    top: 0;
 }
-
+.navbar-fill-backgound{
+    width: 80vw;
+    height: 50px;
+}
 .navbar-left-content{
     width: 80px;
     padding: 10px 10px;
