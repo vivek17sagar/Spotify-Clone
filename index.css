@@ -5,8 +5,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
-    /* border: 1px solid red; */
-    /* overflow: hidden; */
 }
 *::-webkit-scrollbar {
     display: none;
@@ -169,6 +167,7 @@
     position: absolute;
     right: -10px;
     overflow: scroll;
+    padding-bottom: 120px;
 }
 
 .main-container::-webkit-scrollbar {
@@ -299,12 +298,8 @@
 /* ------------------------------------------song-card -css */
 
 
-.main-container-bottom{
-    /* border: 2px solid blue; */
-}
 
 .songs-content{
-    /* border: 1px solid red; */
     width: 80vw;
 }
 
@@ -317,13 +312,13 @@
 
 .songs-box{
     background-color: #121718;
-    /* width: 50vw; */
-    padding: 0px 20px 0px 20px;
-    height: auto;
+    padding: 0px 28px 0px 28px;
+    height: 270px;
     border-radius: 10px;
     outline: none;
     border: none;
     margin: 10px;
+    transition: all 0.5s;
 }
 
 .songs-card-image{
@@ -341,10 +336,6 @@
     overflow-y: hidden;
 }
 
-/* .songs-card::-webkit-scrollbar {
-    display: none;
-  } */
-
 
 .songs-card-title{
     font-size: large;
@@ -357,8 +348,20 @@
 
 .playing-button-animate{
     position: relative;
-    height: 5px;
+    height: 0.1px;
     top: 140px;
-    left: 130px;
+    left: 115px;
     display: none;
+    transition: all 1s;
 }
+
+.songs-box:hover{
+    background-color: #1e1e1e;
+    transform: scale(1.01);
+    /* opacity: 0.5; */
+}
+
+.songs-box:hover .playing-button-animate {
+    display: block;
+    transition: all 1s;
+}​

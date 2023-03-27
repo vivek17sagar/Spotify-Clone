@@ -7,7 +7,7 @@ function forAddSongsCard(index,title,image){
 
   container.innerHTML = `
   <div class="playing-button-animate">
-      <img src="" alt="playingButton">
+      <img src="./images/play.png" alt="playingButton">
   </div>
   <div class="songs-card-image">
       <img src=${image} alt="song-card-img">
