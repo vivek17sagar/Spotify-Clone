@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;300;200&display=swap');
 
 
 *{
@@ -25,13 +25,18 @@
 }
 
 .left-content-image>img{
-    width: 50px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
 
 .left-content-player{
     display: flex;
-    /* border: 1px solid red; */
+    align-items: center;
+}
+
+.songImage{
+    width: 480px;
 }
 
 .left-content-name{
@@ -168,12 +173,22 @@
     right: -10px;
     overflow: scroll;
     padding-bottom: 120px;
+    /* display: none; */
 }
 
 .main-container::-webkit-scrollbar {
     display: none;
   }
 
+  .wrap-allContent{
+    /* display: none; */
+  }
+
+
+  .main-container-top{
+    background: rgb(18,18,18);
+    background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(253,29,29,0.21332282913165268) 50%, rgba(18,18,18,1) 100%);
+}
 
 .navbar{
     width: 80vw;
@@ -181,7 +196,7 @@
     justify-content: space-between;
     padding: 0px 20px;
     align-items: center;
-    background-color: transparent;
+    /* background-color: transparent; */
     position: fixed;
     top: 0;
 }
@@ -203,6 +218,10 @@
     width: 32px;
 }
 
+.heart{
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
 
 .navbar-right-content{
     display: flex;
@@ -365,3 +384,85 @@
     display: block;
     transition: all 1s;
 }​
+
+
+
+audio{
+    background-color: white;
+}
+
+.audio{
+    width: 900px;   
+}
+
+
+audio::-webkit-media-controls-panel{
+  background-color: #121718;
+  /* border: #121718;
+  color: #121718; */
+  padding: 10px;
+}
+audio::-webkit-media-controls-play-button{
+    background-color: white;
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-current-time-display{
+    color: white;
+}
+
+audio::-webkit-media-controls-time-remaining-display{
+    color: white;
+}
+
+/* audio::-webkit-media-controls-timeline{
+    border-radius: 40px;
+    color: white;
+    background-color: lightblue;
+} */
+
+audio::-webkit-media-controls-volume-slider{
+    background-color: white;
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+audio::-webkit-media-controls-mute-button{
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+.forSong{
+    display: none;
+}
+
+
+.songName{
+    font-size: xx-large;
+}
+
+/* audio {
+    filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+    width: 200px;
+    height: 25px;
+} */
+
+audio::-webkit-media-controls-enclosure {
+    border-radius: 5px;
+    background-color: #121718;
+}
+
+.left-content-name{
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+}

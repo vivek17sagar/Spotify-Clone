@@ -5,39 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./style/style.css">
     <!-- <script type="module" src="./spotify.js" defer></script> -->
+   
     <script type="module" src="./index.js" defer></script>
+    <script src="./jsComponents/likedSong.js" defer></script>
    
     <title>Spotify</title>
 </head>
 <body>
+
+    <!---------------------------------- player------------------------------>
     <div class = "player">
         <div class="left-content-player">
             <div class="left-content-image">
-                <img src="./images/trackPhoto.jpg" alt="trackphoto">
+                <img class="songImage" src="./images/trackPhoto.jpg" alt="trackphoto">
             </div>
             <div class="left-content-name">
-                <div class="name-head">
-                    Brown Shortie (feat. Sonam Bajwa)
+                <div class="songName">
+                    Song Name... 
                 </div>
-                <div class="name-description">
-                    Sidhu Moosewala, Sonam Bajwa
+                <div>
+                    <img class="heart" src="./images/green-heart.png">
                 </div>
+                <!-- <div class="songDescription">
+                    Singer Name..
+                </div> -->
             </div>
         </div>
+<!-- ----------------------------------------------------------------------------------------- -->
+      
+        
+
         <div class="mid-content-player">
-            <div class="controls-player">
+            <!-- <div class="controls-player">
                 <img src="./images/shuffle.png" alt="shuffle">
                 <img src="./images/previous.png" alt="previos">
                 <img src="./images/play.png" alt="play">
                 <img src="./images/next.png" alt="next">
                 <img src="./images/repeat.png" alt="repeat">
+                
             </div>
             <div class="timeout-song">
                 <input type="range" class="slider">
-            </div>
+            </div> -->
+            <audio class="audio" src="" controls autoplay>
+                <!-- <source class="audioSrc" src="" type="" autoplay> -->
+            </audio>
         </div>
-        <div class="right-content-player">
+        <!-- <div class="right-content-player">
             <div class="controls-other-player">
                 <img src="./images/mic.png" alt="mic">
                 <img src="./images/queue.png" alt="queue">
@@ -47,7 +63,7 @@
             <div class="volume-control">
                 <input type="range" class="volume-slider">
             </div>
-        </div>
+        </div> -->
         </div>
     <div class="container">
         <div class="side-bar">
@@ -101,9 +117,12 @@
                     </div>
                 </div>                    
         </div>
-    
+        
+
+       
 
         <div class="main-container">
+            <div class="wrap-allContent">
             <div class="main-container-top">
                 <div class="navbar-fill-backgound"></div>
                 <div class="navbar">
@@ -201,7 +220,56 @@
                         </div>
                 </div> -->
             </div>
+
         </div>
+
+
+
+
+
+
+
+
+            <!-- ----------------------its use for other pages rendered like liked song and albums ------------->
+            <div class="container-allOther">
+                <div class="top-content">
+                    <div  class="contentTop">
+                        <div class="heartBox">
+                            <img src="./images/green-heart.png">
+                        </div>
+                        <div class="likedSong">Liked Songs</div>
+                    </div>
+                    <div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>#</th>
+                                    <th>Title</th>
+                                    <th>Date added</th>
+                                    <th>Liked</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tBody">
+                                <!-- <tr>
+                                    <td  class="row">khsfdkjhjkfd</td>
+                                    <td  class="row">jkfd</td>
+                                    <td  class="row">khsfdkjhjkfd</td>
+                                    <td  class="row">khsfdkjhjkfd</td>
+                                    <td  class="row">khsfdkjhjkfd</td>
+                                </tr> -->
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        
     </div>
 </body>
 </html>
