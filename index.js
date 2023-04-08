@@ -20,7 +20,10 @@ function forAddSongsCard(index,title,image,song){
   document.querySelector(`.card-${index}`).append(container);
 }
 
+
+
 data.cardbox.forEach((data,index)=>{
+  // console.log(data)
   let containerBlocks = document.createElement('div');
   containerBlocks.classList.add('songs-content');
   containerBlocks.innerHTML = `
@@ -36,7 +39,7 @@ document.querySelector('.main-container-bottom').append(containerBlocks);
 })
 
 
-
+// console.log(data)
 for(let i = 0; i<4; i++){
 data.cardbox[i].songscards.forEach((item)=>{
     forAddSongsCard(i,item.song_name,item.image_source,item.quality.low)

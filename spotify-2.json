@@ -90,7 +90,87 @@
                 "image_source":"assests/images/shape_of_you.jpg",
                 "quality":{"low":"assests/songs/shapeofyou.mp3","medium":"","high":""},
                 "release_date":"date"
-            }
+            },
+            {
+                "id":8,
+                "playlist_type":false,
+                "playlist":null,
+                "song_name":"tera yaar hoon main",
+                "album_name":"tera yaar hoon main",
+                "singers":"",
+                "image_source":"assests/images/shape_of_you.jpg",
+                "quality":{"low":"assests/songs/07 Tera Yaar Hoon Main - Arijit Singh 190Kbps.mp3","medium":"","high":""},
+                "release_date":"date"
+            },
+            {
+                "id":9,
+                "playlist_type":false,
+                "playlist":null,
+                "song_name":"hamsafar.mp3",
+                "album_name":"hamsafar.mp3",
+                "singers":"",
+                "image_source":"assests/images/shape_of_you.jpg",
+                "quality":{"low":"assests/songs/hamsafar.mp3","medium":"","high":""},
+                "release_date":"date"
+            },
+            {
+                "id":10,
+                "playlist_type":false,
+                "playlist":null,
+                "song_name":"Chhote Chhote Peg.mp3",
+                "album_name":"Chhote Chhote Peg",
+                "singers":"  Yo Yo Honey Singh",
+                "image_source":"assests/images/chote chote peg.jpg",
+                "quality":{"low":"assests/songs/Chhote Chhote Peg - Yo Yo Honey Singh (DjPunjab.Com).mp3","medium":"","high":""},
+                "release_date":"date"
+            },
+            {
+                "id":11,
+                "playlist_type":false,
+                "playlist":null,
+                "song_name":"Kabhi Yun Bhi.mp3",
+                "album_name":"Kabhi Yun Bhi.mp3",
+                "singers":"",
+                "image_source":"assests/images/kabhi yunh bhi aa.jpg",
+                "quality":{"low":"assests/songs/Kabhi Yun Bhi - Ishq Junoon (Super Hot Song) - HQ.mp3","medium":"","high":""},
+                "release_date":"date"
+            },
+            {
+                "id":11,
+                "playlist_type":false,
+                "playlist":null,
+                "song_name":"Lo Safar.mp3",
+                "album_name":"Lo Safar.mp3",
+                "singers":"",
+                "image_source":"assests/images/lo safar.jpg",
+                "quality":{"low":"assests/songs/Lo Safar Song (Baaghi 2) Tiger Shroff 320kbps-(HeroMasti.in).mp3","medium":"","high":""},
+                "release_date":"date"
+
+            },
+          {  "id":12,
+            "playlist_type":false,
+            "playlist":null,
+            "song_name":"Qismat.mp3",
+            "album_name":"Qismat.mp3",
+            "singers":"",
+            "image_source":"assests/images/Qismat.jpg",
+            "quality":{"low":"assests/songs/Qismat - DJMaza.Life - 192Kbps.mp3","medium":"","high":""},
+            "release_date":"date"
+
+            },
+          {
+              "id":13,
+            "playlist_type":false,
+            "playlist":null,
+            "song_name":"Lae_Dooba.m4a",
+            "album_name":"Lae_Dooba.m4a",
+            "singers":"",
+            "image_source":"assests/images/lae dooba.jpg",
+            "quality":{"low":"assests/songs/Lae_Dooba_-_Full_Audio___Aiyaary___Sidharth_Malhotra___Rakul_Preet___Sunidhi_Cha.m4a","medium":"","high":""},
+            "release_date":"date"
+
+        }
+    
         ],
                 "song_name":"ganna top 50",
                 "album_name":"",
@@ -198,7 +278,7 @@
                 "quality":{"low":"assests/songs/07 Tera Yaar Hoon Main - Arijit Singh 190Kbps.mp3","medium":"","high":""},
                 "release_date":"date"
             },
-{
+            {
 
                 "id":9,
                 "playlist_type":false,
