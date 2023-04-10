@@ -170,14 +170,14 @@
     background-color: #121212;
     /* border: 1px solid red; */
     position: absolute;
-    right: -10px;
-    overflow: scroll;
+    right: 0;
+    overflow-y: scroll;
     padding-bottom: 120px;
-    /* display: none; */
+    overflow-x: hidden;
 }
 
 .main-container::-webkit-scrollbar {
-    display: none;
+    /* display: none; */
   }
 
   .wrap-allContent{

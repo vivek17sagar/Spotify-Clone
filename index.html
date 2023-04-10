@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./style/style.css">
-    <!-- <script type="module" src="./spotify.js" defer></script> -->
-   
+
+
+    <script src="./jsComponents/songsAlbumData.js" defer></script>
     <script type="module" src="./index.js" defer></script>
     <script src="./jsComponents/likedSong.js" defer></script>
+    <script src="./jsComponents/Search.js" defer></script>
+    <script src="./jsComponents/Album.js" defer></script>
    
     <title>Spotify</title>
 </head>
@@ -163,6 +166,8 @@
                             <div class="playlist-top-name">
                                 Arjit Singh
                             </div>
+                            <div class="hideThis">0</div>
+                            <div class="hideThis"><img class="png" src="./assests/pngImages/Arjit-Singh-removebg-preview.png"></div>
                         </div>
                         <div class = "playlist-box">
                             <div class="playlist-top-image">
@@ -171,6 +176,8 @@
                             <div class="playlist-top-name">
                                 Honey Singh
                             </div>
+                            <div class="hideThis">1</div>
+                            <div class="hideThis"><img class="png" src="./assests/pngImages/HoneySingh-png.png"></div>
                         </div>
                         <div class = "playlist-box">
                             <div class="playlist-top-image">
@@ -179,6 +186,8 @@
                             <div class="playlist-top-name">
                                 Jass Manak
                             </div>
+                            <div class="hideThis">2</div>
+                            <div class="hideThis"><img class="png" src="./assests/pngImages/Jass-Manak-13-removebg-preview.png"></div>
                         </div>
                     </div>
                     <div class="playlist-top">
@@ -189,6 +198,8 @@
                             <div class="playlist-top-name">
                                 CarryMinati
                             </div>
+                            <div class="hideThis">3</div>
+                            <div class="hideThis"><img class="png" src="./assests/pngImages/carryMinati-png.png"></div>
                         </div>
                         <div class = "playlist-box">
                             <div class="playlist-top-image">
@@ -197,6 +208,8 @@
                             <div class="playlist-top-name">
                                 Sidhu Moosewala
                             </div>
+                            <div class="hideThis">4</div>
+                            <div class="hideThis"><img class="png" src="./assests/pngImages/Sidhu-Moosewala-Photos-72-removebg-preview.png"></div>
                         </div>
                         <div class = "playlist-box">
                             <div class="playlist-top-image">
@@ -205,6 +218,8 @@
                             <div class="playlist-top-name">
                                 Neha Kakkar
                             </div>
+                            <div class="hideThis">5</div>
+                            <div class="hideThis"><img class="png" src="./assests/pngImages/Nehakakkar-png.png"></div>
                         </div>
                     </div>   
                 </div>
@@ -221,7 +236,7 @@
                 </div> -->
             </div>
 
-        </div>
+            </div>
 
 
 
@@ -255,14 +270,57 @@
                               
                             </tbody>
                         </table>
+
                     </div>
                 </div>
             </div>
-        </div>
 
 
 
-        
-    </div>
+
+
+
+
+
+
+
+<!------------------------------ Container Search ---------------------------------------->
+
+            <div class="container-Search">
+                <div class="Search-navbar">
+                    <div class="SearchBox">
+                        <input type="text" placeholder="Search..." alt="searchSong">
+                    </div>
+                    <hr class="breakLine">
+                    <div class="searchSongs">
+                    
+                    </div>
+                </div>
+            </div>
+        <!-- </div>    -->
+
+
+
+         <!--------------------------- Container Albums --------------------------->
+
+            <div class="container-Albums">
+                <!-- <div class="Album-Songs">
+                    <div class="albumImage"><img src="./assests/pngImages/Arjit-Singh-removebg-preview.png">
+                    <div>${singerName}</div>
+                    </div>
+                </div>
+                <div class="renderAlbumSong">
+                jhgsdhjgfhjghsgdfgjhgsfdghgsdgfjgj
+                </div> -->
+               <!-- <div> 
+                    <div class="Album-Songs">
+                        
+                    </div>
+                    <div class="renderAlbumSong">
+
+                    </div>
+                </div> -->
+            </div>
+     </div>
 </body>
 </html>

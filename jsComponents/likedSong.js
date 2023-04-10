@@ -10,22 +10,12 @@ const homePage = document.querySelector('.feature-1-name');
 
 
 
-
 let array = [];
-
-// let array2 = [];
 
 
 let obj;
 
-// obj = JSON.parse(localStorage.getItem('likedSong'));
-// if(obj>null && obj.length>0){
-// array2 = [...obj];
-// }
-
-
-
-function renderLikedSong(image,song,number,checkedImage,playImage){
+function renderLikedSong(image,song,number,checkedImage,playImage,songName){
     let rowSong = document.createElement("tr");
 
 
@@ -37,28 +27,32 @@ function renderLikedSong(image,song,number,checkedImage,playImage){
         <td  class="row">${number}</td>
         <td  class="row">${song}</td>
         <td  class="row"><img class = "checkedImageLogo" src = ${checkedImage}></td>
-        <td  class="row"><img class = "checkedImageLogo" src = ${playImage}></td>
-        <td  class="row">remove</td>
-        
+        <td  class="row"><img class = "checkedImageLogo playBtn" src = ${playImage}></td>
+        <td  class="row">remove</td>       
+        <td class="hideThis">${songName}</td>
     </tr>
     `;
 
     tBody.append(rowSong);
+    console.log(tBody.innerHTML);
     // i++;
 }
 
 
 
 heart.addEventListener('click',()=>{
-
-    
     
     let imageLink = imageS.getAttribute("src");
+    let songName = audioPlayer.getAttribute("src");
+
+    // console.log(songName);
 
     heart.style.transform = "scale(1.5)";
+    
     setTimeout(()=>{
-        heart.style.transform = "scale(1)"
+        heart.style.transform = "scale(1)"    
     },500)
+
 
     let found = true;
     array.forEach((item)=>{
@@ -70,13 +64,14 @@ heart.addEventListener('click',()=>{
     if(found){
     array.push({
         image:`${imageLink}`,
-        song:`${nameS.textContent}`
+        song:`${nameS.textContent}`,
+        songName:`${songName}`
     })
 }
 
     localStorage.setItem('likedSong',JSON.stringify(array));
     obj = JSON.parse(localStorage.getItem('likedSong'))
-
+    // console.log(obj)
     
 })
 
@@ -88,36 +83,51 @@ document.querySelector('.container-likedSong').style.display = "none";
 
 likeSongBtn.addEventListener('click',()=>{
     document.querySelector('.wrap-allContent').style.display = "none";
+    document.querySelector('.container-Search').style.display = "none";
+    document.querySelector('.container-Albums').style.display = "none";
     document.querySelector('.container-likedSong').style.display = "block";
 
 
-    // let allrows = document.querySelector('.tBody');
-    // allrows.innerHTML = "";
+    let allrows = document.querySelector('.tBody');
+    allrows.innerHTML = "";
 
    
         
     obj.forEach((item,index)=>{
-        renderLikedSong(item.image,item.song,index+1,checkedImage,playImage);
+        renderLikedSong(item.image,item.song,index+1,checkedImage,playImage,item.songName);
     })
     
-
 })
 
 
-
-
-// -------------------------for render data firstly presentd in localStorage---------------
-// array2.forEach((item,index)=>{
-//     renderLikedSong(item.image,item.song,index+1,checkedImage,playImage);
-// })
 
 
 
 
 homePage.addEventListener('click',()=>{
     document.querySelector('.wrap-allContent').style.display = "block";
+    document.querySelector('.container-Albums').style.display = "none";
+    document.querySelector('.container-Search').style.display = "none";
     document.querySelector('.container-likedSong').style.display = "none";
+
+
+    document.querySelector('.albumFrame').remove();
 })
 
 
 
+
+
+
+tBody.addEventListener('click',(event)=>{
+    if(event.target.classList.contains("playBtn")){
+    let likeSongSelect = event.target.parentNode.nextSibling.nextSibling.nextSibling.nextSibling.innerHTML;
+    let likeImageSelect = event.target.parentNode.parentNode.children[0].children[0];
+    let likeSongnameSelect = event.target.parentNode.parentNode.children[2].innerHTML;
+    // console.log(likeImageSelect);
+    let ImageLike = likeImageSelect.getAttribute("src");
+    audioPlayer.setAttribute("src",likeSongSelect);
+    imageS.setAttribute("src",ImageLike);
+    nameS.innerHTML = likeSongnameSelect;    
+}
+})

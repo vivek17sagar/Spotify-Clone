@@ -1,10 +1,12 @@
 
 
 
-.container-likedSong{
+.container-likedSong,.container-Search,.container-Albums{
     background-color: #121212;
     width: 100%;
     height: 100vh;
+    padding-bottom: 170px;
+ 
 }
 
 
@@ -57,4 +59,97 @@
 
 .checkedImageLogo{
     width: 20px;
+}
+
+
+.hideThis{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/* ------------------SearchBox Style---------------- */
+
+
+.Search-navbar{
+    /* background-color: red; */
+    width: 100%;
+    height: 30px;
+    padding: 30px;
+    position: fixed;
+}
+
+
+
+.SearchBox>input{
+    width: 550px;
+    padding: 15px;
+    padding-left: 30px;
+    border-radius: 25px;
+    background-color: transparent;
+    outline: none;
+    color: wheat;
+    opacity: 0.5;
+    border: 1px solid gray;
+    transition: all 0.3s;
+}
+
+.SearchBox>input:focus{
+    opacity: 1;
+}
+
+
+.breakLine{
+    margin-top: 20px;
+    opacity: 0.7;
+    width: 1200px;
+}
+
+
+
+.Album-Songs{
+    background: rgb(18,18,18);
+    background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(235,29,253,0.9472163865546218) 50%, rgba(18,18,18,1) 100%);
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+}
+
+.cont{
+    display: flex;
+    align-items: end;
+    /* background-color: red; */
+    
+}
+
+.albumImage{
+    width: 300px;
+    display: flex;
+    align-items: end;
+}
+
+
+.albumName{
+    font-size: 100px;
+    color:white;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+
+.renderAlbumSong{
+    padding: 30px;
+    padding-bottom: 100px;
+    /* margin-top: 30px; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
 }
