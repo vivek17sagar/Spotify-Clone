@@ -21,7 +21,6 @@ function forAddSongsCard(index,title,image,song){
 }
 
 
-
 data.cardbox.forEach((data,index)=>{
   // console.log(data)
   let containerBlocks = document.createElement('div');
