@@ -9,5 +9,10 @@ Search.addEventListener(('click'),()=>{
     document.querySelector('.container-likedSong').style.display = "none";
     document.querySelector('.container-Search').style.display = "block";
 
-
 })
+
+
+// document.querySelector('.searchSongInput').addEventListener('keypress',(e)=>{
+//     console.log('running...')
+//     console.log(e.target.value)
+// })

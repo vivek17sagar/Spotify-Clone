@@ -34,7 +34,6 @@ function renderLikedSong(image,song,number,checkedImage,playImage,songName){
     `;
 
     tBody.append(rowSong);
-    console.log(tBody.innerHTML);
     // i++;
 }
 
@@ -92,10 +91,9 @@ likeSongBtn.addEventListener('click',()=>{
     allrows.innerHTML = "";
 
    
-        
-    obj.forEach((item,index)=>{
-        renderLikedSong(item.image,item.song,index+1,checkedImage,playImage,item.songName);
-    })
+    obj.length>0 ? obj.forEach((item,index)=>{
+                renderLikedSong(item.image,item.song,index+1,checkedImage,playImage,item.songName);
+                }):"";
     
 })
 
@@ -110,8 +108,8 @@ homePage.addEventListener('click',()=>{
     document.querySelector('.container-Search').style.display = "none";
     document.querySelector('.container-likedSong').style.display = "none";
 
-
     document.querySelector('.albumFrame').remove();
+
 })
 
 

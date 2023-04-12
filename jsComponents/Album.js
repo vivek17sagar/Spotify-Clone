@@ -16,7 +16,6 @@ albums.addEventListener('click',(e)=>{
     let singerName = e.target.children[1].textContent;
     let singerImage = (e.target.children[3].children[0]).getAttribute("src");
 
-    // console.log(indexSinger);
         albumsSong(indexSinger,singerName,singerImage);
     }
 
@@ -27,17 +26,6 @@ albums.addEventListener('click',(e)=>{
 
 
 function albumsSong(indexSinger,singerName,singerImage){
-
-    // console.log(indexSinger,singerName,singerImage);
-
-//     <div> 
-//     <div class="Album-Songs">
-        
-//     </div>
-//     <div class="renderAlbumSong">
-
-//     </div>
-// </div>
 
     let albumBanner = document.createElement("div");
 
@@ -68,27 +56,12 @@ function albumsSong(indexSinger,singerName,singerImage){
         </div>      
         <div class="songs-card-image">
             <img src=${item.songImage} alt="song-card-img">
-            <p class="forSong">${item.songName}</p>
+            <p class="forSong">${item.songLink}</p>
             <div class="songs-card-title">
             ${item.songName}
             </div>
         </div>
-        </div>
-        `
-
-
+        </div>`
         document.querySelector('.renderAlbumSong').append(songBox);
-    })
-    // const renderAlbumSongs = document.createElement("div");
-    // renderAlbumSongs.classList.add('albumMusic');
+    })}
 
-    // renderAlbumSongs.innerHTML = `
-    // <div class="Album-Songs">
-                        
-    // </div>
-    // <div class="renderAlbumSong">
-
-    // </div>
-    // `
-
-}

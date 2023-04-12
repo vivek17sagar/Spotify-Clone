@@ -1,4 +1,4 @@
-import data from './spotify.json' assert {type: 'json'};
+import data from './data/spotify.json' assert {type: 'json'};
 
 
 function forAddSongsCard(index,title,image,song){
