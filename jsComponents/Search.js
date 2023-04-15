@@ -7,6 +7,8 @@ Search.addEventListener(('click'),()=>{
     document.querySelector('.container-likedSong').style.display = "none";
     document.querySelector('.container-Search').style.display = "block";
 
+    document.querySelector('.albumFrame').remove();
+
 })
 
 function cleanSongs(){

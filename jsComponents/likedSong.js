@@ -86,6 +86,7 @@ likeSongBtn.addEventListener('click',()=>{
     document.querySelector('.container-Albums').style.display = "none";
     document.querySelector('.container-likedSong').style.display = "block";
 
+    document.querySelector('.albumFrame').remove();
 
     let allrows = document.querySelector('.tBody');
     allrows.innerHTML = "";
