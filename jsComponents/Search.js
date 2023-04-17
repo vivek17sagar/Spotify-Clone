@@ -17,18 +17,11 @@ function cleanSongs(){
 
 document.querySelector('.searchSongInput').addEventListener('keyup',(e)=>{
 
-    document.querySelector('.searchSongs').children.length != 0  ? cleanSongs() : null;
-    // console.log(document.querySelector('.searchSongs').children)
-
-
-
+document.querySelector('.searchSongs').children.length != 0  ? cleanSongs() : null;
+   
     let songSearch = e.target.value;
-    
     songSearch.length != 0 ? makeSearchSongBoxes(songSearch) : null;
-    
 })
-
-
 
 
 function makeSearchSongBoxes(songSearch){
@@ -43,27 +36,10 @@ function makeSearchSongBoxes(songSearch){
         let singerNamee = item.songLink.toLowerCase();
         if(songNamee.includes(songSearch) || singerNamee.includes(songSearch)){
             
-                let container = document.createElement('div');
-                container.classList.add('songs-box');
-              
-                container.innerHTML = `
-                <div class="playing-button-animate">
-                    <img class="playerBtn" src="./images/play.png" alt="playingButton">
-                </div>
-                <div class="songs-card-image">
-                    <img src=${item.songImage} alt="song-card-img">
-                    <p class="forSong">${item.songLink}</p>
-                    <div class="songs-card-title">
-                      ${item.songName}
-                    </div>
-                </div>
-                `
-                document.querySelector(`.searchBox`).append(container);
-           
-              
-
+        const song2 = new createSongChart(item.songImage,item.songLink,item.songName,"searchBox")
+        renderBoxesOfSongs.songsBoxesRender.call(song2)
         }
     })
 }
-// Search ki or home page pe jo khali pade box he unki same theme bana denge
+
 

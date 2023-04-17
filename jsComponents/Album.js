@@ -1,9 +1,6 @@
-
-
 document.querySelector('.container-Albums').style.display = "none";
 
 const albums = document.querySelector('.top-container-playlist');
-
 albums.addEventListener('click',(e)=>{
 
     if((typeof e.target.children[1].textContent) == "string"){
@@ -17,18 +14,13 @@ albums.addEventListener('click',(e)=>{
     let singerImage = (e.target.children[3].children[0]).getAttribute("src");
 
         albumsSong(indexSinger,singerName,singerImage);
-    }
-
-    
-    
+    }  
 })
-
 
 
 function albumsSong(indexSinger,singerName,singerImage){
 
     let albumBanner = document.createElement("div");
-
     albumBanner.classList.add('albumFrame');
 
     albumBanner.innerHTML = `
@@ -41,27 +33,17 @@ function albumsSong(indexSinger,singerName,singerImage){
 
     </div>
     `
-
     document.querySelector('.container-Albums').append(albumBanner);
 
     songsAlbum[indexSinger].forEach((item)=>{
-        
-        const songBox = document.createElement("div");
-        
-
-        songBox.innerHTML = `
-        <div class="songs-box">
-            <div class="playing-button-animate">
-            <img class="playerBtn" src="./images/play.png" alt="playingButton">
-        </div>      
-        <div class="songs-card-image">
-            <img src=${item.songImage} alt="song-card-img">
-            <p class="forSong">${item.songLink}</p>
-            <div class="songs-card-title">
-            ${item.songName}
-            </div>
-        </div>
-        </div>`
-        document.querySelector('.renderAlbumSong').append(songBox);
+        const song = new createSongChart(item.songImage,item.songLink,item.songName,"renderAlbumSong")
+    
+        renderBoxesOfSongs.songsBoxesRender.call(song)
     })}
 
+    function createSongChart(songImage,songLink,songName,box){
+        this.songImage = songImage;
+        this.songLink = songLink;
+        this.songName = songName;
+        this.box = box;
+    }

@@ -1,28 +1,14 @@
-import data from './data/spotify.json' assert {type: 'json'};
+import data from '../data/spotify.json' assert {type: 'json'};
 
 
 function forAddSongsCard(index,title,image,song){
-  let container = document.createElement('div');
-  container.classList.add('songs-box');
-
-  container.innerHTML = `
-  <div class="playing-button-animate">
-      <img class="playerBtn" src="./images/play.png" alt="playingButton">
-  </div>
-  <div class="songs-card-image">
-      <img src=${image} alt="song-card-img">
-      <p class="forSong">${song}</p>
-      <div class="songs-card-title">
-        ${title}
-      </div>
-  </div>
-  `
-  document.querySelector(`.card-${index}`).append(container);
+  const song3 = new createSongChart(image,song,title,`card-${index}`)
+  renderBoxesOfSongs.songsBoxesRender.call(song3)
 }
 
 
 data.cardbox.forEach((data,index)=>{
-  // console.log(data)
+  
   let containerBlocks = document.createElement('div');
   containerBlocks.classList.add('songs-content');
   containerBlocks.innerHTML = `
@@ -38,7 +24,6 @@ document.querySelector('.main-container-bottom').append(containerBlocks);
 })
 
 
-// console.log(data)
 for(let i = 0; i<4; i++){
 data.cardbox[i].songscards.forEach((item)=>{
     forAddSongsCard(i,item.song_name,item.image_source,item.quality.low)
@@ -60,8 +45,6 @@ need.addEventListener('click',(e)=>{
   const imageLink = forImage.getAttribute("src");
   imageSong.setAttribute("src",imageLink)
   audioMain.setAttribute("src",link);
-
-
 }
 
 })
