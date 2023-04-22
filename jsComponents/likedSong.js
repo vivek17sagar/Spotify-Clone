@@ -11,13 +11,10 @@ const homePage = document.querySelector('.feature-1-name');
 
 
 let array = [];
-
-
-let obj;
+let obj = [];
 
 function renderLikedSong(image,song,number,checkedImage,playImage,songName){
     let rowSong = document.createElement("tr");
-
 
     rowSong.innerHTML = `
     <tr>
@@ -34,7 +31,6 @@ function renderLikedSong(image,song,number,checkedImage,playImage,songName){
     `;
 
     tBody.append(rowSong);
-    // i++;
 }
 
 
@@ -44,14 +40,11 @@ heart.addEventListener('click',()=>{
     let imageLink = imageS.getAttribute("src");
     let songName = audioPlayer.getAttribute("src");
 
-    // console.log(songName);
-
     heart.style.transform = "scale(1.5)";
     
     setTimeout(()=>{
         heart.style.transform = "scale(1)"    
     },500)
-
 
     let found = true;
     array.forEach((item)=>{
@@ -67,13 +60,10 @@ heart.addEventListener('click',()=>{
         songName:`${songName}`
     })
 }
-
     localStorage.setItem('likedSong',JSON.stringify(array));
     obj = JSON.parse(localStorage.getItem('likedSong'))
-    // console.log(obj)
-    
+    createPlayList();
 })
-
 
 let checkedImage = "images/checked.png";
 let playImage = "images/play.png";
@@ -84,22 +74,20 @@ likeSongBtn.addEventListener('click',()=>{
     document.querySelector('.wrap-allContent').style.display = "none";
     document.querySelector('.container-Search').style.display = "none";
     document.querySelector('.container-Albums').style.display = "none";
+    document.querySelector('.container-createPlayList').style.display = "none";
     document.querySelector('.container-likedSong').style.display = "block";
-
-    document.querySelector('.albumFrame').remove();
-
+    
+    document.querySelector('.container-Albums').children.length!=0 ?
+    document.querySelector('.albumFrame').remove() : null;
+   
     let allrows = document.querySelector('.tBody');
     allrows.innerHTML = "";
+ 
 
-   
     obj.length>0 ? obj.forEach((item,index)=>{
-                renderLikedSong(item.image,item.song,index+1,checkedImage,playImage,item.songName);
-                }):"";
-    
+            renderLikedSong(item.image,item.song,index+1,checkedImage,playImage,item.songName);
+        }):null;
 })
-
-
-
 
 
 
@@ -107,15 +95,15 @@ homePage.addEventListener('click',()=>{
     document.querySelector('.wrap-allContent').style.display = "block";
     document.querySelector('.container-Albums').style.display = "none";
     document.querySelector('.container-Search').style.display = "none";
+    document.querySelector('.container-createPlayList').style.display = "none";
     document.querySelector('.container-likedSong').style.display = "none";
 
-    document.querySelector('.albumFrame').remove();
+    // document.querySelector('.albumFrame').remove();
+    document.querySelector('.container-Albums').children.length!=0 ?
+    document.querySelector('.albumFrame').remove() : null;
+   
 
 })
-
-
-
-
 
 
 tBody.addEventListener('click',(event)=>{
@@ -123,7 +111,7 @@ tBody.addEventListener('click',(event)=>{
     let likeSongSelect = event.target.parentNode.nextSibling.nextSibling.nextSibling.nextSibling.innerHTML;
     let likeImageSelect = event.target.parentNode.parentNode.children[0].children[0];
     let likeSongnameSelect = event.target.parentNode.parentNode.children[2].innerHTML;
-    // console.log(likeImageSelect);
+
     let ImageLike = likeImageSelect.getAttribute("src");
     audioPlayer.setAttribute("src",likeSongSelect);
     imageS.setAttribute("src",ImageLike);

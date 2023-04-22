@@ -5,6 +5,7 @@ const Search = document.querySelector('.feature-2-name');
 Search.addEventListener(('click'),()=>{
     document.querySelector('.wrap-allContent').style.display = "none";
     document.querySelector('.container-likedSong').style.display = "none";
+    document.querySelector('.container-createPlayList').style.display = "none";
     document.querySelector('.container-Search').style.display = "block";
 
     document.querySelector('.albumFrame').remove();

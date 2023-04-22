@@ -16,7 +16,8 @@
     
     <script src="./jsComponents/Album.js" defer></script>
     <script src="./jsComponents/BackGroundColor.js" defer></script>
-    <script src="./jsComponents/renderSongs.js" defer></script>
+    <script src="./jsComponents/container/renderSongs.js" defer></script>
+    <script src="./jsComponents/createPlaylist.js" defer></script>
 
     
     <script type="module" src="./jsComponents/index.js" defer></script>
@@ -295,15 +296,17 @@
 
             <div class="container-Search">
                 <div class="Search-navbar">
+                    
                     <div class="SearchBox">
                         <input class="searchSongInput" type="text" placeholder="Search..." alt="searchSong">
                     </div>
-                    <hr class="breakLine">
+                </div>
+                    <!-- <hr class="breakLine"> -->
                     <div class="searchSongs">
                         
                     
                     </div>
-                </div>
+                
             </div>
         <!-- </div>    -->
 
@@ -328,6 +331,19 @@
 
                     </div>
                 </div> -->
+            </div>
+
+
+
+         <!--------------------------- Container createPlayList --------------------------->
+
+
+            <div class="container-createPlayList">
+                <hr class="breakLine">
+                <div class="createPlayList-songs">
+                    
+                </div> 
+                
             </div>
      </div>
 </body>
