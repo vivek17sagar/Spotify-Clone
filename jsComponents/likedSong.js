@@ -44,7 +44,7 @@ heart.addEventListener('click',()=>{
     
     setTimeout(()=>{
         heart.style.transform = "scale(1)"    
-    },500)
+    },200)
 
     let found = true;
     array.forEach((item)=>{
@@ -63,6 +63,7 @@ heart.addEventListener('click',()=>{
     localStorage.setItem('likedSong',JSON.stringify(array));
     obj = JSON.parse(localStorage.getItem('likedSong'))
     createPlayList();
+
 })
 
 let checkedImage = "images/checked.png";

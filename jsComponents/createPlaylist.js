@@ -19,6 +19,10 @@ document.querySelector('.feature-4-name').addEventListener('click',()=>{
 })
 
 const createPlayList = () => {
+
+  document.querySelector('.createPlayList-songs').children.length > 0 ? 
+  document.querySelector('.createPlayList-songs').innerHTML = '' :null;
+
   obj.length > 0
     ? obj.forEach((item) => {
         const needObj = new createSongChart(
@@ -28,7 +32,6 @@ const createPlayList = () => {
           "createPlayList-songs"
         );
         renderBoxesOfSongs.songsBoxesRender.call(needObj);
-        console.log(needObj);
       })
     : null;
 };
