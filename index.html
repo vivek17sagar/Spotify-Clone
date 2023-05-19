@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" href="./style/signup.css">
 
+    <script src="./jsComponents/signup.js" defer></script>
+    <script src="./jsComponents/login.js" defer></script>
 
     <script src="./data/songsAlbumData.js" defer></script>
     <script src="./data/searchData.js" defer></script>
@@ -26,7 +30,54 @@
 </head>
 <body>
 
-    <!---------------------------------- player------------------------------>
+    <!------------------------------------- Signup Page ----------------------------------------->
+
+    <div class="main-container-sign">
+        <div class="user-container">
+            <div class="login-container">
+                <div class="fill-detail">
+                    <img src="./Logo-2.png" alt="logo" class="logo"><br/>
+                    <div class="details">
+                        <form>
+                            <p class="error">Name already exist !!</p>
+                            <input type="text" class="name" placeholder="Enter Your Name..."/><br>
+                            <input type="text" class="username" placeholder="Enter Your UserName..."/><br>
+                            <input type="password" class="password" placeholder="Enter Your Password..."/><br/>
+                        </form>
+                    </div>
+                    <button class="lgn-btn">Signup</button>
+                    <div class="extra-line">
+                        <p>if you already user? <span class="lgn">Login</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!------------------------------------- Login Page ----------------------------------------->
+
+<div class="main-container-1">
+    <div class="container-1">
+        <div class="login-container-1">
+            <div class="fill-detail-1">
+                <img src="./assests/login-signup-image/Logo-2.png" alt="logo" class="logo-1"><br/>
+               
+                <div class="details-1">
+                    <p class="lgn-error">User Not found!!</p>
+                    <input type="text" class="username-1" placeholder="Enter Your UserName..."/><br>
+                    <input type="password" class="password-1" placeholder="Enter Your Password..."/><br/>
+                </div>
+                <button class="lgn-btn-1 login">Login</button><br/>
+                <button class="lgn-btn-1 signup">Signup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="global-container">
+
+    <!---------------------------------- player ------------------------------>
     <div class = "player">
         <div class="left-content-player">
             <div class="left-content-image">
@@ -44,7 +95,7 @@
                 </div> -->
             </div>
         </div>
-<!-- ----------------------------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------------------------------------- -->
       
         
 
@@ -292,7 +343,7 @@
 
 
 
-<!------------------------------ Container Search ---------------------------------------->
+    <!------------------------------ Container Search ---------------------------------------->
 
             <div class="container-Search">
                 <div class="Search-navbar">
@@ -345,5 +396,8 @@
                 
             </div>
      </div>
+
+</div>
+
 </body>
 </html>
