@@ -5,9 +5,13 @@ const password = document.querySelector('.password');
 
 let arrayOfUser;
 
-JSON.parse(localStorage.getItem('user')).length<1?arrayOfUser=[]:arrayOfUser=JSON.parse(localStorage.getItem('user'))
+// JSON.parse(localStorage.getItem('user')).length<1?arrayOfUser=[]:arrayOfUser=JSON.parse(localStorage.getItem('user'))
 
-
+if(localStorage.getItem('user')){
+    arrayOfUser=JSON.parse(localStorage.getItem('user'))
+}else{
+    arrayOfUser=[];
+}
 
 document.querySelector('.lgn-btn').addEventListener('click',()=>{
    verifyUser();

@@ -6,6 +6,7 @@ const userInputPassword = document.querySelector('.password-1');
 
 document.querySelector('.lgn-btn-1').addEventListener('click',()=>{
     
+    if(arrayOfUser.length>0){
     arrayOfUser.forEach((item)=>{
         if(userInputLogin.value==item.username){
             if(userInputPassword.value==item.password){
@@ -21,6 +22,10 @@ document.querySelector('.lgn-btn-1').addEventListener('click',()=>{
             document.querySelector('.lgn-error').style.display = "block"
         }
     })
+}else{
+    document.querySelector('.lgn-error').innerHTML = "User Not Found !!";
+            document.querySelector('.lgn-error').style.display = "block"
+}
 })
 
 
