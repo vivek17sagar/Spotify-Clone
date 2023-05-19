@@ -3,7 +3,11 @@ const username = document.querySelector('.username');
 const password = document.querySelector('.password');
 
 
-let arrayOfUser = JSON.parse(localStorage.getItem('user'))
+let arrayOfUser;
+
+JSON.parse(localStorage.getItem('user')).length<1?arrayOfUser=[]:arrayOfUser=JSON.parse(localStorage.getItem('user'))
+
+
 
 document.querySelector('.lgn-btn').addEventListener('click',()=>{
    verifyUser();

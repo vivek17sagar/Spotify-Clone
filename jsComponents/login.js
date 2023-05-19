@@ -5,7 +5,7 @@ const userInputPassword = document.querySelector('.password-1');
          
 
 document.querySelector('.lgn-btn-1').addEventListener('click',()=>{
-    console.log(arrayOfUser)
+    
     arrayOfUser.forEach((item)=>{
         if(userInputLogin.value==item.username){
             if(userInputPassword.value==item.password){
