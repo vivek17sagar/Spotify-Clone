@@ -5,12 +5,13 @@ const password = document.querySelector('.password');
 
 let arrayOfUser;
 
-// JSON.parse(localStorage.getItem('user')).length<1?arrayOfUser=[]:arrayOfUser=JSON.parse(localStorage.getItem('user'))
 
 if(localStorage.getItem('user')){
     arrayOfUser=JSON.parse(localStorage.getItem('user'))
 }else{
-    arrayOfUser=[];
+    arrayOfUser=[{
+        name:"spotify",username:"spotify",password:"123456"
+    }];
 }
 
 document.querySelector('.lgn-btn').addEventListener('click',()=>{
@@ -26,7 +27,6 @@ document.querySelector('.lgn-btn').addEventListener('click',()=>{
 
     arrayOfUser = [...getArray]
 
-    // console.log(JSON.parse(localStorage.getItem('user')))
     name.value = ''
     username.value = ''
     password.value = ''
